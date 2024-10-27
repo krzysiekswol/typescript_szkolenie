@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { TypescriptComponent } from './components/typescript.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   template: `
     <h1>Hello from {{ name }}!</h1>
-    <a target="_blank" href="https://angular.dev/overview">
-      Learn more about Angular
-    </a>
-    <br>
-    <br>
-    <button (click)=print()>Click</button>
+    <bhr-typescript-practice/>
   `,
+  imports: [
+    TypescriptComponent,
+  ]
 })
 export class App {
   name = 'Angular';
