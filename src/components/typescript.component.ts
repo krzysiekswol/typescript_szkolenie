@@ -11,9 +11,11 @@ import { ChangeDetectionStrategy, Component, WritableSignal, signal } from "@ang
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TypescriptComponent {
-    data: any = 2;
-    dataTs: unknown = 2;
+    data: any = 2; // pozwala na cokolwiek disabluje TS
+    dataTs: unknown = 2; // nie pozwala na cokolwiek
 
     update(): void {
     }
 }
+
+// Any pozwala na rozwój bug'a, a uknown na rozwój developera
